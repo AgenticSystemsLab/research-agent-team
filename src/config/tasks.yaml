@@ -1,0 +1,45 @@
+# Task Definitions
+# Each task is assigned to one agent
+
+research_task:
+  description: >
+    Research the following topic thoroughly: {topic}
+
+    Use the search tools available to find recent and reliable information.
+    Collect key facts, statistics, different viewpoints, and useful examples.
+    Focus on quality over quantity. Prefer recent sources when possible.
+  expected_output: >
+    A detailed collection of research findings including:
+    - Key facts and data points
+    - Important sources and links
+    - Different perspectives on the topic
+    - Any notable trends or recent developments
+
+analysis_task:
+  description: >
+    Analyze the research findings provided by the researcher.
+
+    Identify the most important insights, patterns, and takeaways.
+    Highlight what is most valuable for someone learning about this topic.
+    Point out any conflicting information or areas that need caution.
+  expected_output: >
+    A clear analysis containing:
+    - Top 5-7 key insights
+    - Main trends or patterns
+    - Important caveats or limitations
+    - What a beginner should know first
+
+writing_task:
+  description: >
+    Write a professional research report based on the analysis.
+
+    The report should be easy to read and well structured.
+    Use headings, bullet points, and short paragraphs.
+    Make it valuable for someone who wants to understand the topic quickly.
+  expected_output: >
+    A complete research report with:
+    - Clear title
+    - Short introduction
+    - Main sections with headings
+    - Key takeaways or conclusion
+    - Sources section (if available)
