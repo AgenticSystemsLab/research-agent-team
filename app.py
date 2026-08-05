@@ -1,13 +1,13 @@
 """
 Simple web interface for the Research Agent Team.
-Run with: streamlit run app.py
+Works both locally and on Streamlit Community Cloud.
 """
 
 import streamlit as st
 import os
 from dotenv import load_dotenv
 
-# Load environment variables
+# Load .env for local development
 load_dotenv()
 
 # Page config
@@ -40,6 +40,20 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
+def get_openai_key():
+    """Get OpenAI API key from Streamlit secrets (cloud) or environment (local)."""
+    # First try Streamlit secrets (for Streamlit Cloud)
+    try:
+        key = st.secrets.get("OPENAI_API_KEY", None)
+        if key:
+            return key
+    except Exception:
+        pass
+
+    # Fallback to environment variable / .env (for local)
+    return os.getenv("OPENAI_API_KEY")
+
+
 def main():
     st.markdown('<div class="main-header">🔍 Research Agent Team</div>', unsafe_allow_html=True)
     st.markdown(
@@ -70,12 +84,16 @@ def main():
         4. The Writer agent produces a clean report
         """)
 
-    # Check for API key
-    openai_key = os.getenv("OPENAI_API_KEY")
+    # Get API key
+    openai_key = get_openai_key()
+
     if not openai_key or openai_key == "sk-your-openai-key-here":
-        st.error("⚠️ Please set your OPENAI_API_KEY in the .env file before running.")
-        st.info("Copy `.env.example` to `.env` and add your OpenAI API key.")
+        st.error("⚠️ OpenAI API key is missing.")
+        st.info("If you are the owner: Add the key in Streamlit Cloud → App Settings → Secrets.")
         st.stop()
+
+    # Make sure the key is available as an environment variable for CrewAI
+    os.environ["OPENAI_API_KEY"] = openai_key
 
     # Main input
     st.subheader("What would you like to research?")
@@ -88,38 +106,45 @@ def main():
         "How to start a career in AI engineering"
     ]
 
+    # Use session state so example buttons work properly
+    if "topic" not in st.session_state:
+        st.session_state.topic = ""
+
     topic = st.text_input(
         "Enter your research topic",
-        placeholder="e.g. Best practices for building AI agents"
+        value=st.session_state.topic,
+        placeholder="e.g. Best practices for building AI agents",
+        key="topic_input"
     )
 
     st.caption("Or try one of these examples:")
     cols = st.columns(len(example_topics))
     for i, example in enumerate(example_topics):
         if cols[i].button(example, key=f"ex_{i}"):
-            topic = example
             st.session_state.topic = example
+            st.rerun()
 
     # Run button
     if st.button("🚀 Start Research", type="primary", use_container_width=True):
-        if not topic or len(topic.strip()) < 5:
+        final_topic = topic.strip() if topic else st.session_state.topic.strip()
+
+        if not final_topic or len(final_topic) < 5:
             st.warning("Please enter a more specific research topic.")
         else:
             with st.spinner("The agent team is working... This usually takes 30–90 seconds."):
                 try:
                     from src.crews.research_crew import run_research
-                    report = run_research(topic.strip())
+                    report = run_research(final_topic)
                     
                     st.success("✅ Research complete!")
                     st.divider()
                     st.subheader("📄 Final Report")
                     st.markdown(report)
                     
-                    # Download button
                     st.download_button(
                         label="Download Report as Markdown",
                         data=report,
-                        file_name=f"research_report_{topic[:30].replace(' ', '_')}.md",
+                        file_name=f"research_report_{final_topic[:30].replace(' ', '_')}.md",
                         mime="text/markdown"
                     )
                 except Exception as e:
