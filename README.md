@@ -1,4 +1,4 @@
-# 🔍 Research Agent Team - 🚀 **Live App:** [Click here to try the Live Agent](https://research-agent-team-git-981831266697.us-central1.run.app)
+# 🔍 Research Agent Team 
 
 **A multi-agent AI system that researches any topic and writes a clear, structured report.**
 
