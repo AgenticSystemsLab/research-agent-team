@@ -1,12 +1,10 @@
-# 🔍 Research Agent Team
+# 🔍 Research Agent Team - 🚀 **Live App:** [Click here to try the Live Agent](https://research-agent-team-git-981831266697.us-central1.run.app)
 
 **A multi-agent AI system that researches any topic and writes a clear, structured report.**
 
 Built as a portfolio project to demonstrate practical AI agent skills.
 
 🚀 **Live App:** [Click here to try the Live Agent](https://research-agent-team-git-981831266697.us-central1.run.app)
-
----
 
 ---
 
