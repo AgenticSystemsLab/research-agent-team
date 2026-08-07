@@ -30,13 +30,13 @@ This is a real example of **multi-agent orchestration** — one of the core skil
 
 ## Why This Project Matters (for recruiters / hiring managers)
 
-Current: Sequential agent workflows with context passing
+Sequential agent workflows with context passing
 
-Upgraded: Sequential Context Passing: Demonstrates orchestrating state and data flow between specialized models without halluncination or context drop.
+Sequential Context Passing: Demonstrates orchestrating state and data flow between specialized models without halluncination or context drop.
 
-Current: Clean project structure and readable code
+Clean project structure and readable code
 
-Upgraded: Production Architecture: Modularized codebase separating agent configurations, custom tools, and execution logic for easy scaling.
+Production Architecture: Modularized codebase separating agent configurations, custom tools, and execution logic for easy scaling.
 
 ---
 
