@@ -1,16 +1,16 @@
 # 🔍 Research Agent Team 
 
-### 🛠️ Tech Stack & Infrastructure
-* **Framework:** CrewAI, Python
-* **Frontend:** Streamlit
-* **Deployment:** Google Cloud Run, Docker
-* **Tools:** Web Search API
-
 **A multi-agent AI system that researches any topic and writes a clear, structured report.**
 
 Built as a portfolio project to demonstrate practical AI agent skills.
 
 🚀 **[Click Here to Test the Live Application](https://research-agent-team-git-981831266697.us-central1.run.app)**
+
+### 🛠️ Tech Stack & Infrastructure
+* **Framework:** CrewAI, Python
+* **Frontend:** Streamlit
+* **Deployment:** Google Cloud Run, Docker
+* **Tools:** Web Search API
 
 ---
 
