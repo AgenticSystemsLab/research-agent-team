@@ -4,8 +4,6 @@
 
 Built as a portfolio project to demonstrate practical AI agent skills.
 
-# 🔍 Research Agent Team
-
 🚀 **Live App:** [Click here to try the Live Agent](https://research-agent-team-git-981831266697.us-central1.run.app)
 
 ---
