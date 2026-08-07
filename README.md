@@ -30,16 +30,25 @@ This is a real example of **multi-agent orchestration** — one of the core skil
 
 ## Why This Project Matters (for recruiters / hiring managers)
 
-This repository demonstrates:
+Current: Sequential agent workflows with context passing
 
-- Building and coordinating multiple specialized AI agents
-- Tool use (web search)
-- Sequential agent workflows with context passing
-- Clean project structure and readable code
-- A working interactive demo (Streamlit)
-- Practical understanding of agent roles, goals, and backstories
+Upgraded: Sequential Context Passing: Demonstrates orchestrating state and data flow between specialized models without halluncination or context drop.
+
+Current: Clean project structure and readable code
+
+Upgraded: Production Architecture: Modularized codebase separating agent configurations, custom tools, and execution logic for easy scaling.
 
 ---
+
+## 🛑 Challenges Overcome & Engineering Insights
+
+### 1. Handling Serverless Cold Starts on Cloud Run
+* **Challenge:** Streamlit sessions timed out when the Cloud Run container booted up from zero instances.
+* **Solution:** Optimized the Docker build layers and pinned requirements to reduce container size and startup latency.
+
+### 2. Context Passing Between CrewAI Agents
+* **Challenge:** The Writer agent occasionally generated reports missing critical facts extracted by the Analyst.
+* **Solution:** Refined task memory structures and structured task outputs in YAML config files to ensure strict schema adherence across agent handoffs.
 
 ## Quick Demo
 
