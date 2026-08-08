@@ -221,18 +221,17 @@ When you run a research query (e.g., "Best practices for building AI agents"), t
 
 
 ## 🔮 Future Work & Roadmap
-[ ] Implement persistent vector memory for historical context retrieval
+- [x] Implement persistent vector memory for historical context retrieval
 
-[ ] Add native document/PDF parsing capabilities for custom corpus research
+- [x] Add native document/PDF parsing capabilities for custom corpus research
 
-[ ] Implement multi-branch parallel agent execution for sub-topic exploration
+- [x] Implement multi-branch parallel agent execution for sub-topic exploration
 
-[ ] Integrate automated evaluation frameworks (e.g., Ragas / DeepEval)
+- [x] Integrate automated evaluation frameworks (e.g., Ragas / DeepEval)
 
-[ ] Add rate limiting and session isolation for serverless deployments
+- [x] Add rate limiting and session isolation for serverless deployments
 
-[ ] Establish automated CI/CD pipeline via GitHub Actions for Google Cloud Run
-
+- [x] Establish automated CI/CD pipeline via GitHub Actions for Google Cloud Run
 
 
 ## 📜 License
