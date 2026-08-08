@@ -17,7 +17,6 @@ Built as a portfolio project to demonstrate practical AI agent skills.
 * **Deployment:** Google Cloud Run, Docker
 * **Tools:** Web Search API
 
----
 
 ## What This Project Does
 
@@ -31,15 +30,14 @@ You give it a research question → a team of 3 AI agents work together → you 
 
 This architecture demonstrates production-grade multi-agent orchestration, managing state, tool use, and context passing across specialized AI roles.
 
----
+
 
 ## 💼 Why This Project Matters (for recruiters / hiring managers)
 
-**Sequential Context Passing:** Demonstrates orchestrating state and data flow between specialized models without hallucination or context drop.
+* **Sequential Context Passing:** Demonstrates orchestrating state and data flow between specialized models without hallucination or context drop.
+* **Production Architecture:** Modularized codebase separating agent configurations, custom tools, and execution logic for easy scaling.
 
-**Production Architecture:** Modularized codebase separating agent configurations, custom tools, and execution logic for easy scaling.
 
----
 
 ## 🛑 Challenges Overcome & Engineering Insights
 
@@ -51,8 +49,11 @@ This architecture demonstrates production-grade multi-agent orchestration, manag
 * **Challenge:** The Writer agent occasionally generated reports missing critical facts extracted by the Analyst.
 * **Solution:** Refined task memory structures and structured task outputs in YAML config files to ensure strict schema adherence across agent handoffs.
 
-## Quick Demo
+## ⚡ Quickstart & Live Demo
+ 
+🚀 **[Click Here to Test the Live Application](https://research-agent-team-git-981831266697.us-central1.run.app)** 🚀
 
+If you prefer running the app locally on your machine:
 ```bash
 # After setup (see below)
 streamlit run app.py
@@ -99,7 +100,7 @@ research-agent-team/
 
 ```bash
 
-git clone https://github.com/AgenticSystemsLab/research-agent-team.git
+git clone [https://github.com/AgenticSystemsLab/research-agent-team.git](https://github.com/AgenticSystemsLab/research-agent-team.git)
 cd research-agent-team
 ```
 
@@ -153,7 +154,7 @@ python main.py "Your research topic here"
 
 ---
 
-## How the Agents Work Together
+## 🔄 How the Agents Work Together
 
 ```
 User Topic
@@ -167,64 +168,76 @@ User Topic
 Final Report
 ```
 
-This sequential process is called a **Crew** in CrewAI. Each agent has:
-- A clear **role**
-- A specific **goal**
-- A **backstory** that shapes how it behaves
-- Access to tools (only the Researcher needs search tools)
+This sequential execution pipeline is orchestrated using CrewAI. Each specialized agent utilizes:
 
----
+* **Role & Specific Goal:** High-precision task execution avoiding single-prompt drift.
+
+* **Tailored Backstory:** Contextual grounding for consistent tone and domain behavior.
+
+* **Scoped Tool Access:** Least-privilege design (only the Researcher has external search access).
+
+This architecture demonstrates production-grade multi-agent orchestration, managing state, tool use, and context passing across specialized AI roles.
+
+
 
 ## 📸 Example Output & Interface Preview
+When you run a research query (e.g., "Best practices for building AI agents"), the crew executes a sequential pipeline to deliver:
 
-When you run a research query (e.g., *"Best practices for building AI agents"*), the crew executes a sequential pipeline to deliver:
 * **Structured Overview:** Executive title, context, and clear introduction
+
 * **Core Analysis:** Categorized key insights and emerging trends
+
 * **Actionable Takeaways:** Practical recommendations and concluding summary
 
 | 1. Submit Query & Top Results | 2. Key Insights & Analysis | 3. Complete Agent Report |
 | :---: | :---: | :---: |
 | ![Query Input](docs/example_report_1.png) | ![Agent Processing](docs/example_report_2.png) | ![Final Report](docs/example_report_3.png) |
+
+
+## 🛠️ Technologies Used
+* **CrewAI** – Multi-agent orchestration framework
+
+* **OpenAI (gpt-4o-mini)** – High-speed LLM logic engine
+
+* **DuckDuckGo Search** – Native web search integration (no API key required)
+
+* **Tavily** – Advanced research search API (optional)
+
+* **Streamlit** – Interactive frontend interface
+
+* **Python** – Core runtime
+
+## 💡 Engineering Takeaways
+* **Role Specialization:** Designed modular, single-responsibility agent roles rather than relying on one general-purpose prompt.
+
+* **Context Preservation:** Standardized intermediate payloads to maintain schema integrity across task handoffs.
+
+* **Tool Scoping:** Enforced principle of least privilege by restricting Web Search API access solely to the research agent.
+
+* **Cost & Performance Optimization:** Balanced speed and API expenditure by leveraging gpt-4o-mini with strict context caps.
+
+* **User-Centric Interface:** Wrapped technical pipeline in a clean Streamlit UI for non-technical evaluation.
+
+
+
+## 🔮 Future Work & Roadmap
+[ ] Implement persistent vector memory for historical context retrieval
+
+[ ] Add native document/PDF parsing capabilities for custom corpus research
+
+[ ] Implement multi-branch parallel agent execution for sub-topic exploration
+
+[ ] Integrate automated evaluation frameworks (e.g., Ragas / DeepEval)
+
+[ ] Add rate limiting and session isolation for serverless deployments
+
+[ ] Establish automated CI/CD pipeline via GitHub Actions for Google Cloud Run
+
+
+
+## 📜 License
+Distributed under the MIT License. See LICENSE for details.
+
 ---
 
-## Technologies Used
-
-- **CrewAI** – Multi-agent orchestration framework
-- **OpenAI (gpt-4o-mini)** – Language model
-- **DuckDuckGo Search** – Free web search (no API key required)
-- **Tavily** – Higher quality search (optional)
-- **Streamlit** – Simple web interface
-- **Python** – Core language
-
----
-
-## What I Learned Building This
-
-- How to design specialized agent roles instead of one general-purpose agent
-- Passing context between agents cleanly
-- Giving agents the right tools (and only the tools they need)
-- Balancing cost, speed, and quality (using `gpt-4o-mini`)
-- Creating a simple UI so non-technical people can try the system
-- Writing clear documentation so others can run the project easily
-
----
-
-## Possible Improvements (Future Work)
-
-- Add memory so the system remembers previous research
-- Support for uploading PDFs / documents
-- Parallel research on multiple sub-topics
-- Evaluation metrics (how good is the report?)
-- Add rate limiting and user session management on Cloud Run
-- Implement CI/CD pipeline via GitHub Actions for automated Cloud Run deployments
-
----
-
-## License
-
-MIT License – feel free to use and modify.
-
----
-
-**Built as a first AI agent portfolio project.**  
-If you're a recruiter or hiring manager reading this — thank you for taking a look!
+Thank you for taking the time to review this project! If you have any questions or feedback, feel free to reach out or open an issue.
