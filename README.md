@@ -185,6 +185,12 @@ When you run a topic like *"Best practices for building AI agents in 2026"*, you
 - Practical recommendations
 - Summary / takeaways
 
+## 📸 Interface Preview
+
+| 1. Submit Query | 2. Agent Output Report |
+| :---: | :---: |
+| ![Query Input](docs/input_prompt.png) | ![Generated Report](docs/final_report.png) |
+
 ---
 
 ## Technologies Used
