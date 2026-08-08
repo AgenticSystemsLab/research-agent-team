@@ -176,7 +176,6 @@ This sequential process is called a **Crew** in CrewAI. Each agent has:
 ---
 
 ## 📸 Example Output
-![Research Report Screenshot](docs/example_report.png)
 
 When you run a topic like *"Best practices for building AI agents in 2026"*, you get a structured report with:
 
@@ -185,12 +184,13 @@ When you run a topic like *"Best practices for building AI agents in 2026"*, you
 - Practical recommendations
 - Summary / takeaways
 
-## 📸 Interface Preview
+## 📷 Interface & Output Preview
 
-| 1. Submit Query | 2. Agent Output Report |
-| :---: | :---: |
-| ![Query Input](docs/input_prompt.png) | ![Generated Report](docs/final_report.png) |
+| 1. Submit Query & Top Results | 2. Key Insights & Analysis | 3. Complete Agent Report |
+| :---: | :---: | :---: |
+| ![Query Input](docs/example_report_1.png) | ![Agent Processing](docs/example_report_2.png) | ![Final Report](docs/example_report_3.png) |
 
+---
 ---
 
 ## Technologies Used
