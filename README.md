@@ -29,7 +29,7 @@ You give it a research question → a team of 3 AI agents work together → you 
 | 🧠 **Analyst** | Critical Analyst | Extracts key insights, trends, and important takeaways |
 | ✍️ **Writer** | Professional Report Writer | Turns the analysis into a clean, readable report |
 
-This is a real example of **multi-agent orchestration** — one of the core skills companies look for when hiring people who work with AI agents.
+This architecture demonstrates production-grade multi-agent orchestration, managing state, tool use, and context passing across specialized AI roles.
 
 ---
 
@@ -175,22 +175,16 @@ This sequential process is called a **Crew** in CrewAI. Each agent has:
 
 ---
 
-## 📸 Example Output
+## 📸 Example Output & Interface Preview
 
-When you run a topic like *"Best practices for building AI agents in 2026"*, you get a structured report with:
-
-- Clear title and introduction
-- Key insights section
-- Practical recommendations
-- Summary / takeaways
-
-## 📷 Interface & Output Preview
+When you run a research query (e.g., *"Best practices for building AI agents"*), the crew executes a sequential pipeline to deliver:
+* **Structured Overview:** Executive title, context, and clear introduction
+* **Core Analysis:** Categorized key insights and emerging trends
+* **Actionable Takeaways:** Practical recommendations and concluding summary
 
 | 1. Submit Query & Top Results | 2. Key Insights & Analysis | 3. Complete Agent Report |
 | :---: | :---: | :---: |
 | ![Query Input](docs/example_report_1.png) | ![Agent Processing](docs/example_report_2.png) | ![Final Report](docs/example_report_3.png) |
-
----
 ---
 
 ## Technologies Used
