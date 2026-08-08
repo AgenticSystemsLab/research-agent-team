@@ -5,7 +5,7 @@
 ![CrewAI](https://img.shields.io/badge/Framework-CrewAI-FF4B4B?style=flat)
 ![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white)
 
-**A multi-agent AI system that researches any topic and writes a clear, structured report.**
+**A multi-agent AI system that researches any topic and produces a structured report through a sequential Research → Analyze → Write workflow.**
 
 Built as a portfolio project to demonstrate practical AI agent skills.
 
@@ -28,11 +28,11 @@ You give it a research question → a team of 3 AI agents work together → you 
 | 🧠 **Analyst** | Critical Analyst | Extracts key insights, trends, and important takeaways |
 | ✍️ **Writer** | Professional Report Writer | Turns the analysis into a clean, readable report |
 
-This architecture demonstrates production-grade multi-agent orchestration, managing state, tool use, and context passing across specialized AI roles.
+This architecture demonstrates multi-agent orchestration, including state management, tool use, role specialization, and context passing across specialized AI agents.
 
 
 
-## 💼 Why This Project Matters (for recruiters / hiring managers)
+## 💼 Why This Project Matters 
 
 * **Sequential Context Passing:** Demonstrates orchestrating state and data flow between specialized models without hallucination or context drop.
 * **Production Architecture:** Modularized codebase separating agent configurations, custom tools, and execution logic for easy scaling.
@@ -210,8 +210,8 @@ When you run a research query (e.g., "Best practices for building AI agents"), t
 ## 💡 Engineering Takeaways
 * **Role Specialization:** Designed modular, single-responsibility agent roles rather than relying on one general-purpose prompt.
 
-* **Context Preservation:** Standardized intermediate payloads to maintain schema integrity across task handoffs.
-
+* **Context Preservation:** Structured task outputs to maintain important information across agent handoffs.
+  
 * **Tool Scoping:** Enforced principle of least privilege by restricting Web Search API access solely to the research agent.
 
 * **Cost & Performance Optimization:** Balanced speed and API expenditure by leveraging gpt-4o-mini with strict context caps.
