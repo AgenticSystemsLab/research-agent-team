@@ -1,4 +1,9 @@
-# 🔍 Research Agent Team 
+# 🔍 Research Agent Team
+
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python&logoColor=white)
+![GCP](https://img.shields.io/badge/Google_Cloud_Run-Deployed-4285F4?style=flat&logo=googlecloud&logoColor=white)
+![CrewAI](https://img.shields.io/badge/Framework-CrewAI-FF4B4B?style=flat)
+![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white)
 
 **A multi-agent AI system that researches any topic and writes a clear, structured report.**
 
@@ -28,13 +33,9 @@ This is a real example of **multi-agent orchestration** — one of the core skil
 
 ---
 
-## Why This Project Matters (for recruiters / hiring managers)
+## 💼 Why This Project Matters (for recruiters / hiring managers)
 
-Sequential agent workflows with context passing
-
-Sequential Context Passing: Demonstrates orchestrating state and data flow between specialized models without halluncination or context drop.
-
-Clean project structure and readable code
+Sequential Context Passing: Demonstrates orchestrating state and data flow between specialized models without hallucination or context drop.
 
 Production Architecture: Modularized codebase separating agent configurations, custom tools, and execution logic for easy scaling.
 
@@ -97,7 +98,8 @@ research-agent-team/
 ### 2. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/research-agent-team.git
+
+git clone https://github.com/AgenticSystemsLab/research-agent-team.git
 cd research-agent-team
 ```
 
@@ -182,6 +184,9 @@ When you run a topic like *"Best practices for building AI agents in 2026"*, you
 - Practical recommendations
 - Summary / takeaways
 
+### 📸 Example Output
+![Research Report Screenshot](docs/example_report.png)
+
 ---
 
 ## Technologies Used
@@ -212,7 +217,8 @@ When you run a topic like *"Best practices for building AI agents in 2026"*, you
 - Support for uploading PDFs / documents
 - Parallel research on multiple sub-topics
 - Evaluation metrics (how good is the report?)
-- Deployment to Streamlit Cloud or Hugging Face Spaces for a public demo link
+- Add rate limiting and user session management on Cloud Run
+- Implement CI/CD pipeline via GitHub Actions for automated Cloud Run deployments
 
 ---
 
