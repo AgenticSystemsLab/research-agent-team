@@ -35,9 +35,9 @@ This is a real example of **multi-agent orchestration** — one of the core skil
 
 ## 💼 Why This Project Matters (for recruiters / hiring managers)
 
-Sequential Context Passing: Demonstrates orchestrating state and data flow between specialized models without hallucination or context drop.
+**Sequential Context Passing:** Demonstrates orchestrating state and data flow between specialized models without hallucination or context drop.
 
-Production Architecture: Modularized codebase separating agent configurations, custom tools, and execution logic for easy scaling.
+**Production Architecture:** Modularized codebase separating agent configurations, custom tools, and execution logic for easy scaling.
 
 ---
 
@@ -175,7 +175,8 @@ This sequential process is called a **Crew** in CrewAI. Each agent has:
 
 ---
 
-## Example Output
+## 📸 Example Output
+![Research Report Screenshot](docs/example_report.png)
 
 When you run a topic like *"Best practices for building AI agents in 2026"*, you get a structured report with:
 
@@ -183,9 +184,6 @@ When you run a topic like *"Best practices for building AI agents in 2026"*, you
 - Key insights section
 - Practical recommendations
 - Summary / takeaways
-
-### 📸 Example Output
-![Research Report Screenshot](docs/example_report.png)
 
 ---
 
