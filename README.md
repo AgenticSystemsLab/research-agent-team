@@ -1,5 +1,5 @@
 # 🔍 Research Agent Team
-
+![Research Agent Team Banner](research_banner.png)
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python&logoColor=white)
 ![GCP](https://img.shields.io/badge/Google_Cloud_Run-Deployed-4285F4?style=flat&logo=googlecloud&logoColor=white)
 ![CrewAI](https://img.shields.io/badge/Framework-CrewAI-FF4B4B?style=flat)
